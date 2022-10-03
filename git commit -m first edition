@@ -1,0 +1,549 @@
+[1mdiff --git a/Homework-part2/hw-1/hw-1.ipynb b/Homework-part2/hw-1/hw-1.ipynb[m
+[1mdeleted file mode 100644[m
+[1mindex 489be98..0000000[m
+[1m--- a/Homework-part2/hw-1/hw-1.ipynb[m
+[1m+++ /dev/null[m
+[36m@@ -1,191 +0,0 @@[m
+[31m-{[m
+[31m- "cells": [[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": 51,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "Назва клубу:  Chelsya , Місто клубу:  London , Бали клубу: 45\n",[m
+[31m-      "Назва клубу:  Liverpool , Місто клубу:  Liverpool , Бали клубу: 34\n",[m
+[31m-      "Назва клубу:  Juventus , Місто клубу:  Italy , Бали клубу: 67\n",[m
+[31m-      "Клуб Liverpool має найменшу кількість балів 34\n"[m
+[31m-     ][m
+[31m-    }[m
+[31m-   ],[m
+[31m-   "source": [[m
+[31m-    "\n",[m
+[31m-    "class football_club():\n",[m
+[31m-    "    name_club = ''\n",[m
+[31m-    "    city_club = ''\n",[m
+[31m-    "    points_club = 0\n",[m
+[31m-    "\n",[m
+[31m-    "class Championship(football_club):\n",[m
+[31m-    "    country_champ = 'England'\n",[m
+[31m-    "    name_сhamp = 'Premier League'\n",[m
+[31m-    "    list_team_champ = []\n",[m
+[31m-    "\n",[m
+[31m-    "    def add_team(self, new_team):\n",[m
+[31m-    "        self.list_team_champ.append(new_team)\n",[m
+[31m-    "\n",[m
+[31m-    "    def print_team(self):\n",[m
+[31m-    "            for curent_teams in self.list_team_champ:\n",[m
+[31m-    "                print('Назва клубу: ', curent_teams.name_club,', Місто клубу: ', curent_teams.city_club, ', Бали клубу:',curent_teams.points_club)\n",[m
+[31m-    "\n",[m
+[31m-    "    def team_min_points(self):\n",[m
+[31m-    "        min=1000\n",[m
+[31m-    "        for min_points in self.list_team_champ:\n",[m
+[31m-    "            if min_points.points_club < min:\n",[m
+[31m-    "                min=min_points.points_club\n",[m
+[31m-    "\n",[m
+[31m-    "        for min_points in self.list_team_champ:\n",[m
+[31m-    "            if min_points.points_club == min:\n",[m
+[31m-    "                print('Клуб', min_points.name_club,'має найменшу кількість балів', min_points.points_club)\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "championship = Championship()\n",[m
+[31m-    "\n",[m
+[31m-    "Liverpool = football_club()\n",[m
+[31m-    "Liverpool.name_club = 'Liverpool'\n",[m
+[31m-    "Liverpool.city_club = 'Liverpool'\n",[m
+[31m-    "Liverpool.points_club = 34\n",[m
+[31m-    "\n",[m
+[31m-    "Chelsya = football_club()\n",[m
+[31m-    "Chelsya.name_club = 'Chelsya'\n",[m
+[31m-    "Chelsya.city_club = 'London'\n",[m
+[31m-    "Chelsya.points_club = 45\n",[m
+[31m-    "\n",[m
+[31m-    "Juventus = football_club()\n",[m
+[31m-    "Juventus.name_club = 'Juventus'\n",[m
+[31m-    "Juventus.city_club = 'Italy'\n",[m
+[31m-    "Juventus.points_club = 67\n",[m
+[31m-    "\n",[m
+[31m-    "championship.add_team(Chelsya)\n",[m
+[31m-    "championship.add_team(Liverpool)\n",[m
+[31m-    "championship.add_team(Juventus)\n",[m
+[31m-    "\n",[m
+[31m-    "championship.print_team()\n",[m
+[31m-    "championship.team_min_points()\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "\n"[m
+[31m-   ][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": 88,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "Назва клубу:  Chelsya , Місто клубу:  London , Бали клубу: 45\n",[m
+[31m-      "Назва клубу:  Liverpool , Місто клубу:  Liverpool , Бали клубу: 34\n",[m
+[31m-      "Назва клубу:  Juventus , Місто клубу:  Italy , Бали клубу: 67\n",[m
+[31m-      "Назва клубу:  Real Madrid , Місто клубу:  Madrid , Бали клубу: 56\n",[m
+[31m-      "Назва клубу:  Bavaria , Місто клубу:  Munxin , Бали клубу: 33\n",[m
+[31m-      "\n",[m
+[31m-      "Клуб Bavaria ,з міста Munxin , має найменшу кількість балів 33\n",[m
+[31m-      "У Чемпіонаті Premier League у місті England\n",[m
+[31m-      "\n",[m
+[31m-      "Клуб Juventus ,з міста Italy , має найбільшу кількість балів 67\n",[m
+[31m-      "У Чемпіонаті Premier League у місті England\n"[m
+[31m-     ][m
+[31m-    }[m
+[31m-   ],[m
+[31m-   "source": [[m
+[31m-    "\n",[m
+[31m-    "class football_club():\n",[m
+[31m-    "    name_club = ''\n",[m
+[31m-    "    city_club = ''\n",[m
+[31m-    "    points_club = 0\n",[m
+[31m-    "\n",[m
+[31m-    "class Championship(football_club):\n",[m
+[31m-    "    country_champ = 'England'\n",[m
+[31m-    "    name_сhamp = 'Premier League'\n",[m
+[31m-    "    list_team_champ = []\n",[m
+[31m-    "\n",[m
+[31m-    "    def print_team(self):\n",[m
+[31m-    "            for curent_teams in self.list_team_champ:\n",[m
+[31m-    "                print('Назва клубу: ', curent_teams.name_club,', Місто клубу: ', curent_teams.city_club, ', Бали клубу:',curent_teams.points_club)\n",[m
+[31m-    "\n",[m
+[31m-    "    def team_min_points(self):\n",[m
+[31m-    "        min_points = self.list_team_champ[0]\n",[m
+[31m-    "        for current_team in self.list_team_champ:\n",[m
+[31m-    "            if current_team.points_club < min_points.points_club:\n",[m
+[31m-    "                min_points = current_team\n",[m
+[31m-    "        print('Клуб', min_points.name_club,',з міста',min_points.city_club, ', має найменшу кількість балів', min_points.points_club)\n",[m
+[31m-    "        print('У Чемпіонаті',self.name_сhamp,'у місті',self.country_champ )    \n",[m
+[31m-    "        print('')\n",[m
+[31m-    "    \n",[m
+[31m-    "    def team_max_points(self):\n",[m
+[31m-    "        max_points = self.list_team_champ[0]\n",[m
+[31m-    "        for current_team in self.list_team_champ:\n",[m
+[31m-    "            if current_team.points_club > max_points.points_club:\n",[m
+[31m-    "                max_points = current_team\n",[m
+[31m-    "        print('Клуб', max_points.name_club,',з міста',max_points.city_club, ', має найбільшу кількість балів', max_points.points_club)\n",[m
+[31m-    "        print('У Чемпіонаті',self.name_сhamp,'у місті',self.country_champ )\n",[m
+[31m-    "    \n",[m
+[31m-    "    def add_student(self, new_club):\n",[m
+[31m-    "        self.list_team_champ.append(new_club)\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "championship = Championship()\n",[m
+[31m-    "\n",[m
+[31m-    "Liverpool = football_club()\n",[m
+[31m-    "Liverpool.name_club = 'Liverpool'\n",[m
+[31m-    "Liverpool.city_club = 'Liverpool'\n",[m
+[31m-    "Liverpool.points_club = 34\n",[m
+[31m-    "\n",[m
+[31m-    "Chelsya = football_club()\n",[m
+[31m-    "Chelsya.name_club = 'Chelsya'\n",[m
+[31m-    "Chelsya.city_club = 'London'\n",[m
+[31m-    "Chelsya.points_club = 45\n",[m
+[31m-    "\n",[m
+[31m-    "Juventus = football_club()\n",[m
+[31m-    "Juventus.name_club = 'Juventus'\n",[m
+[31m-    "Juventus.city_club = 'Italy'\n",[m
+[31m-    "Juventus.points_club = 67\n",[m
+[31m-    "\n",[m
+[31m-    "Real = football_club()\n",[m
+[31m-    "Real.name_club = 'Real Madrid'\n",[m
+[31m-    "Real.city_club = 'Madrid'\n",[m
+[31m-    "Real.points_club = 56\n",[m
+[31m-    "\n",[m
+[31m-    "Bavaria = football_club()\n",[m
+[31m-    "Bavaria.name_club = 'Bavaria'\n",[m
+[31m-    "Bavaria.city_club = 'Munxin'\n",[m
+[31m-    "Bavaria.points_club = 33\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "championship.add_student(Chelsya)\n",[m
+[31m-    "championship.add_student(Liverpool)\n",[m
+[31m-    "championship.add_student(Juventus)\n",[m
+[31m-    "championship.add_student(Real)\n",[m
+[31m-    "championship.add_student(Bavaria)\n",[m
+[31m-    "\n",[m
+[31m-    "championship.print_team()\n",[m
+[31m-    "print('')\n",[m
+[31m-    "championship.team_min_points()\n",[m
+[31m-    "championship.team_max_points()\n",[m
+[31m-    "\n",[m
+[31m-    "\n"[m
+[31m-   ][m
+[31m-  }[m
+[31m- ],[m
+[31m- "metadata": {[m
+[31m-  "language_info": {[m
+[31m-   "name": "python"[m
+[31m-  },[m
+[31m-  "orig_nbformat": 4[m
+[31m- },[m
+[31m- "nbformat": 4,[m
+[31m- "nbformat_minor": 2[m
+[31m-}[m
+[1mdiff --git a/hw-10/phones-K.txt b/hw-10/phones-K.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 0f653eb..0000000[m
+[1m--- a/hw-10/phones-K.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,4 +0,0 @@[m
+[31m-0679123456[m
+[31m-0979123456[m
+[31m-0671111111[m
+[31m-0672222222[m
+[1mdiff --git a/hw-10/phones-L.txt b/hw-10/phones-L.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 42f0b4d..0000000[m
+[1m--- a/hw-10/phones-L.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-0639123456[m
+[1mdiff --git a/hw-10/phones-V.txt b/hw-10/phones-V.txt[m
+[1mdeleted file mode 100644[m
+[1mindex dfa71e3..0000000[m
+[1m--- a/hw-10/phones-V.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,4 +0,0 @@[m
+[31m-0509123456[m
+[31m-0669123456[m
+[31m-0999123456[m
+[31m-0503333333[m
+[1mdiff --git a/hw-10/phones.py b/hw-10/phones.py[m
+[1mdeleted file mode 100644[m
+[1mindex 45a42e0..0000000[m
+[1m--- a/hw-10/phones.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,60 +0,0 @@[m
+[31m-def check_phone(phone):[m
+[31m-   if len(phone) == 10: [m
+[31m-      return True[m
+[31m-   else: [m
+[31m-      return False[m
+[31m-[m
+[31m-def mobile_operator(phone):[m
+[31m-   Kievstar = ('068', '067', '097')[m
+[31m-   Vodafone = ('050', '066', '099')[m
+[31m-   Lifesel = ('063', '093')[m
+[31m-   code = phone[0:3][m
+[31m-   if code in Kievstar:[m
+[31m-     return 'Kievstar'[m
+[31m-   elif code in Vodafone:[m
+[31m-     return 'Vodafone'[m
+[31m-   elif code in Lifesel:[m
+[31m-     return 'Lifesel'[m
+[31m-   else:[m
+[31m-      return 'None'[m
+[31m-[m
+[31m-fh = open(r'C:\Users\PC\Desktop\Python\Part1\Homework\hw-10\phones1.txt') [m
+[31m-lines = fh.readlines()[m
+[31m-[m
+[31m-#K_file = open(r'C:\Users\PC\Desktop\Python\Homework\hw-10\phones-K.txt')[m
+[31m-#V_file = open(r'C:\Users\PC\Desktop\Python\Homework\hw-10\phones-V.txt')[m
+[31m-#L_file = open(r'C:\Users\PC\Desktop\Python\Homework\hw-10\phones-L.txt')[m
+[31m-[m
+[31m-K_file = open('phones-K.txt','a')[m
+[31m-V_file = open('phones-V.txt','a')[m
+[31m-L_file = open('phones-L.txt','a')[m
+[31m-[m
+[31m-[m
+[31m-for i in lines:[m
+[31m-   if check_phone(i[:-1]):[m
+[31m-      if mobile_operator(i)=='Kievstar':[m
+[31m-         K_file.write(i)[m
+[31m-      elif mobile_operator(i)=='Vodafone':[m
+[31m-         V_file.write(i)[m
+[31m-      elif mobile_operator(i)=='Lifesel':[m
+[31m-         L_file.write(i)[m
+[31m-      else:[m
+[31m-         print ('Phone number', i[:-1], 'is not mobile')[m
+[31m-   else:[m
+[31m-      print ('Phone number', i[:-1], 'is incorrect')[m
+[31m-[m
+[31m-[m
+[31m-fh.close()[m
+[31m-K_file.close()[m
+[31m-V_file.close()[m
+[31m-L_file.close()[m
+[31m-[m
+[31m-#K_file = 'Python\Homework\hw-10\phones-K.txt'[m
+[31m-#V_file = 'Python\Homework\hw-10\phones-V.txt'[m
+[31m-#L_file = 'Python\Homework\hw-10\phones-L.txt'[m
+[31m-[m
+[31m-#K_file = open('K_file', 'a')[m
+[31m-#V_file = open('V_file', 'a')[m
+[31m-#L_file = open('L_file', 'a')[m
+[31m-[m
+[31m-#K_file.write(mobile_operator['Kievstar'])[m
+[1mdiff --git a/hw-10/phones1.txt b/hw-10/phones1.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 47fafe2..0000000[m
+[1m--- a/hw-10/phones1.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-0679123456[m
+[31m-0979123456[m
+[31m-0639123456[m
+[31m-09391234567[m
+[31m-0509123456[m
+[31m-0669123456[m
+[31m-0999123456[m
+[31m-04491234567[m
+[31m-0671111111[m
+[31m-0672222222[m
+[31m-0503333333[m
+[31m-0445555555[m
+[1mdiff --git a/hw-9/Module.py b/hw-9/Module.py[m
+[1mdeleted file mode 100644[m
+[1mindex 0c96395..0000000[m
+[1m--- a/hw-9/Module.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,10 +0,0 @@[m
+[31m-from math import pi[m
+[31m-def square(a):[m
+[31m-    S = (a * a) * 2[m
+[31m-    return S[m
+[31m-def curcle(diameter):[m
+[31m-    S = diameter * diameter / 4 * pi[m
+[31m-    return S[m
+[31m-def Rectangle(a, b):[m
+[31m-    S = (a * b) * 2[m
+[31m-    return S [m
+\ No newline at end of file[m
+[1mdiff --git a/hw-9/Script.py b/hw-9/Script.py[m
+[1mdeleted file mode 100644[m
+[1mindex 771e52e..0000000[m
+[1m--- a/hw-9/Script.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,12 +0,0 @@[m
+[31m-from Module import square[m
+[31m-from Module import curcle[m
+[31m-[m
+[31m-f1 = square(3)[m
+[31m-f2 = curcle(5)[m
+[31m-[m
+[31m-if f1 < f2:[m
+[31m-    print(f1, '<', f2)[m
+[31m-elif f1 > f2:[m
+[31m-    print(f1, '>', f2)[m
+[31m-else:[m
+[31m-    print(f1, '=' ,f2)[m
+[1mdiff --git a/hw2/HW .ipynb b/hw2/HW .ipynb[m
+[1mdeleted file mode 100644[m
+[1mindex 007c32e..0000000[m
+[1m--- a/hw2/HW .ipynb[m	
+[1m+++ /dev/null[m
+[36m@@ -1,109 +0,0 @@[m
+[31m-{[m
+[31m- "cells": [[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": 6,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "Людина за прізвищем Трунов отримав 34 балів та отримав оцінку Незадовільно\n"[m
+[31m-     ][m
+[31m-    }[m
+[31m-   ],[m
+[31m-   "source": [[m
+[31m-    "last_name = input('Ваше прізвище')\n",[m
+[31m-    "balls = int(input('Бали'))\n",[m
+[31m-    "if balls > 100:\n",[m
+[31m-    "    grade ='Такого бала не існує'\n",[m
+[31m-    "elif balls > 94:\n",[m
+[31m-    "    grade ='Відмінно'\n",[m
+[31m-    "elif balls > 74:\n",[m
+[31m-    "    grade ='Добре'\n",[m
+[31m-    "elif balls > 60:\n",[m
+[31m-    "    grade ='Задовільно'\n",[m
+[31m-    "elif balls < 60:\n",[m
+[31m-    "    grade ='Незадовільно'\n",[m
+[31m-    "else:\n",[m
+[31m-    "    balls < 0\n",[m
+[31m-    "    grade ='Такого бала не існує'\n",[m
+[31m-    "     \n",[m
+[31m-    "\n",[m
+[31m-    "print('Людина за прізвищем', last_name, 'отримав', balls, 'балів та отримав оцінку', grade )\n"[m
+[31m-   ][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": 21,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "Область за кодом є Харківська область\n"[m
+[31m-     ][m
+[31m-    }[m
+[31m-   ],[m
+[31m-   "source": [[m
+[31m-    "region_code = input('Введіть код області')\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "match region_code: \n",[m
+[31m-    "    case  'AA' | 'KA':\n",[m
+[31m-    "        region = 'Киівська область'\n",[m
+[31m-    "    case  'АА' | 'КА':\n",[m
+[31m-    "        region = 'Киівська область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case 'AE' | 'АЕ':\n",[m
+[31m-    "        region = 'Днепропетровська область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case 'AH' | 'АН':\n",[m
+[31m-    "        region = 'Донецька область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case 'AX' | 'АХ':\n",[m
+[31m-    "        region = 'Харківська область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case 'CA' | 'СА':\n",[m
+[31m-    "        region = 'Черкаська область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case 'CB' | 'СВ':\n",[m
+[31m-    "        region = 'Чернігівська область'\n",[m
+[31m-    "\n",[m
+[31m-    "    case '-':\n",[m
+[31m-    "        region = 'Невідоміша область'\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "print('Область за кодом є', region)"[m
+[31m-   ][m
+[31m-  }[m
+[31m- ],[m
+[31m- "metadata": {[m
+[31m-  "interpreter": {[m
+[31m-   "hash": "e593ac106456af50ce7af38f9671c411b49d6cd90f9b885e167f0f594e09038c"[m
+[31m-  },[m
+[31m-  "kernelspec": {[m
+[31m-   "display_name": "Python 3.10.4 64-bit",[m
+[31m-   "language": "python",[m
+[31m-   "name": "python3"[m
+[31m-  },[m
+[31m-  "language_info": {[m
+[31m-   "codemirror_mode": {[m
+[31m-    "name": "ipython",[m
+[31m-    "version": 3[m
+[31m-   },[m
+[31m-   "file_extension": ".py",[m
+[31m-   "mimetype": "text/x-python",[m
+[31m-   "name": "python",[m
+[31m-   "nbconvert_exporter": "python",[m
+[31m-   "pygments_lexer": "ipython3",[m
+[31m-   "version": "3.10.4"[m
+[31m-  },[m
+[31m-  "orig_nbformat": 4[m
+[31m- },[m
+[31m- "nbformat": 4,[m
+[31m- "nbformat_minor": 2[m
+[31m-}[m
+[1mdiff --git a/hw3/Hw3.ipynb b/hw3/Hw3.ipynb[m
+[1mdeleted file mode 100644[m
+[1mindex c96b89c..0000000[m
+[1m--- a/hw3/Hw3.ipynb[m
+[1m+++ /dev/null[m
+[36m@@ -1,65 +0,0 @@[m
+[31m-{[m
+[31m- "cells": [[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [],[m
+[31m-   "source": [[m
+[31m-    "a = int(input('Введіть перше число')) \n",[m
+[31m-    "b = int(input('Введіть друге число'))\n",[m
+[31m-    "\n",[m
+[31m-    "sum = 0 \n",[m
+[31m-    "\n",[m
+[31m-    "for i in range(a, b + 1) : \n",[m
+[31m-    "    \n",[m
+[31m-    "    sum += i**2 \n",[m
+[31m-    "\n",[m
+[31m-    "\n",[m
+[31m-    "print(sum)"[m
+[31m-   ][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [],[m
+[31m-   "source": [[m
+[31m-    "string = input('Введіть строку')\n",[m
+[31m-    "symbol = input('Введіть символ')\n",[m
+[31m-    "count = 0\n",[m
+[31m-    "\n",[m
+[31m-    "for i in range(len(string)):\n",[m
+[31m-    "    if symbol == string[i] :\n",[m
+[31m-    "        count += 1\n",[m
+[31m-    "\n",[m
+[31m-    "print('кількість входження в строку даного символу',count)\n"[m
+[31m-   ][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [],[m
+[31m-   "source": [[m
+[31m-    "types_places = ['Egypt', 'Turkey', 'Dominican Republic','Azov sea']\n",[m
+[31m-    "dreams = input('Куда плануєте ?')\n",[m
+[31m-    "\n",[m
+[31m-    "for place in types_places:\n",[m
+[31m-    "    if dreams == place:\n",[m
+[31m-    "        print('Ви вже бували в цьому місті')\n",[m
+[31m-    "        break\n",[m
+[31m-    "else:\n",[m
+[31m-    "    print('У вас це буде перша подорож до цього міста')"[m
+[31m-   ][m
+[31m-  }[m
+[31m- ],[m
+[31m- "metadata": {[m
+[31m-  "language_info": {[m
+[31m-   "name": "python"[m
+[31m-  },[m
+[31m-  "orig_nbformat": 4[m
+[31m- },[m
+[31m- "nbformat": 4,[m
+[31m- "nbformat_minor": 2[m
+[31m-}[m
+[1mdiff --git a/hw4/Hw4.ipynb b/hw4/Hw4.ipynb[m
+[1mdeleted file mode 100644[m
+[1mindex b82700f..0000000[m
+[1m--- a/hw4/Hw4.ipynb[m
+[1m+++ /dev/null[m
+[36m@@ -1,79 +0,0 @@[m
+[31m-{[m
+[31m- "cells": [[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {},[m
+[31m-   "outputs": [],[m
+[31m-   "source": [[m
+[31m-    "elements = [\n",[m
+[31m-    "\n",[m
+[31m-    "    ['phone', 'samsung', 11000],\n",[m
+[31m-    "\n",[m
+[31m-    "    ['notebook', 'sony', 28000],\n",[m
+[31m-    "\n
