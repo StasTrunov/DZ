@@ -22,6 +22,3 @@ class Post(models.Model):
     date = models.DateTimeField(null=True, blank=True)
     like = models.PositiveIntegerField(default=0)
     dislike = models.PositiveIntegerField(default=0)
-
-
-

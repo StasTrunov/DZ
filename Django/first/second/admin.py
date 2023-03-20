@@ -3,15 +3,15 @@ from second.models import Author, Post, Category
 
 
 @admin.register(Author)
-class SettingAdmin(admin.ModelAdmin):
-    list_display = ('name', )
+class AuthorAdmin(admin.ModelAdmin):
+    list_display__ = ('name', )
 
 
 @admin.register(Post)
-class SettingAdmin(admin.ModelAdmin):
-    list_display = ('author', 'text', 'like', 'dislike')
+class PostAdmin(admin.ModelAdmin):
+    list_display_ = ('author', 'text', 'like', 'dislike')
 
 
 @admin.register(Category)
-class SettingAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
