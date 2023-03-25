@@ -21,6 +21,8 @@ urlpatterns = [
     path('steam/', include('steam.urls')),
     path('homework1/', include('homework1.urls')),
     path('school/', include('school.urls')),
+    path('api/', include('snippets.urls')),
+    path('api/', include('school.urls')),
     path('', include('second.urls'))
 
 ]

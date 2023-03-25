@@ -9,7 +9,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display_ = ('author', 'text', 'like', 'dislike')
+    list_display_ = ('author', 'text', 'like', 'dislike',)
 
 
 @admin.register(Category)

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'steam',
     'school',
     'homework1',
+    'snippets',
 ]
 
 REST_FRAMEWORK = {
