@@ -9,3 +9,17 @@ class StudentSerializer(serializers.HyperlinkedModelSerializer):
         fields = [
             'name', 'second_name', 'email', 'age'
         ]
+
+class ClassSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta():
+        model = Class
+        fields = [
+            'name', 'age'
+        ]
+
+class SchoolSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta():
+        model = School
+        fields = [
+            'name', 'country'
+        ]
