@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> View Article </title>
+</head>
+<body>
+    <style > 
+        h1 {
+            color: rgb(44, 4, 82);
+            font-style: italic;
+    
+        }
+        h2 {
+            color:rgb(73, 44, 99);
+            font-style: italic
+        }
+        h3 {
+            color: rgb(97, 64, 129);
+            font-style: italic;
+        }
+        p {
+            color:rgb(136, 81, 183);
+            font-style: italic;
+            padding-bottom: 2em
+        }
+    
+    </style>
+    {% for a in articles %}
+        <h1>{{ a.title }}</h1>
+        <h2> {{ a.created_at }} </h3>
+        <h3>{{ a.description }}</h3>
+        <p>{{ a.body }}</p>
+    {% endfor %}
+</body>
+</html>
