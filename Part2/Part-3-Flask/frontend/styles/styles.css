@@ -1,0 +1,53 @@
+/* Таким чином, застосовується до всіх абзаців на сторінці */
+p {
+    font-size: 24px;
+}
+
+
+/* Таким чином, застосовується до всіх абзаців на сторінці */
+p {
+    font-size: 24px;
+  }
+  
+  /* Таким чином, застосовується до всіх посилань на сторінці */
+  a {
+    text-decoration: none;
+  }
+
+/* Таким чином, застосовується до всіх тегів з класом title */
+.title {
+    font-weight: 500;
+  }
+  
+  /* Таким чином, застосовується до всіх тегів з класом text */
+  .text {
+    color: brown;
+    font-size: 18px;
+  }
+  
+  /* Таким чином, застосовується до всіх тегів з класом link */
+  .link {
+    text-decoration: none;
+  }
+
+  body {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .alert {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .warning {
+    color: orange;
+  }
+  
+  .error {
+    color: red;
+  }
